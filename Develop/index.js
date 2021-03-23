@@ -56,7 +56,7 @@ const questions = [
 
 {
     type: "input",
-    message: "Please click on links from Table of contents?",
+    message: "click on links from Table of contents?",
     name:"clickOnLinks"
 },
 

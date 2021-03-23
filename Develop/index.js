@@ -39,7 +39,7 @@ const questions = [
     type: "input",
     message: "What License do you need for project?",
     name: "projectLicense",
-    choices:["License 1",  "License2"]
+    choices:["License 1",  "License2", "License 3", "License 4"]
 },
 
 {

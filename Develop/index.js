@@ -1,5 +1,6 @@
 // array of questions for user
 var inquirer = require("inquirer");
+var fs = require('fs');
 
 
 const questions = [
@@ -57,25 +58,18 @@ const questions = [
         name: "emailaddress"
     },
 
-    {
-        type: "input",
-        message: "Please click on links from Table of contents?",
-        name: "clickOnLinks"
-    },
-
-
-    {
-        type: "input",
-        message: "What is your Project Test Instructions?",
-        name: "projectTestInstructions"
-    }
-
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
 
-    
+
+    fs.writeFile(fileName, data, function (err) {
+        if (err) return console.log(err);
+        console.log('readme file');
+    });
+
+
 
 }
 
@@ -83,10 +77,18 @@ function writeToFile(fileName, data) {
 
 function generateReadme(response) {
 
-    var projectTitle = ( "# "  +  response.projectTitle  + "\n");
+    var projectTitle = ("# " + response.projectTitle + "\n");
     var projectDiscription = (response.projectDiscription + "\n");
     var projectInstallation = ("## Installation" + "\n" + response.projectInstallationInstructions + "\n");
-    console.log(projectTitle + projectDiscription + projectInstallation);
+    var projectUsage = ("## Usage" + "\n" + response.projectUsageInformation + "\n");
+    var projectContribution = ("## Contribution" + "\n" + response.projectContributionGuidelines + "\n");
+    var projectTest = ("## Test" + "\n" + response.projectTestInstructions + "\n");
+    var license = ("## License" + "\n" + response.projectLicense + "\n");
+    var contact = ("## Author" + "\n" + response.emailaddress + "\n");
+
+
+    return (projectTitle + projectDiscription + projectInstallation + projectUsage +
+        projectContribution + projectTest + license + contact);
 
 
 
@@ -95,12 +97,15 @@ function generateReadme(response) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions)
-    .then(function(response) {
+        .then(function (response) {
+            var readme = generateReadme(response);
+            writeToFile("README.md", readme);
 
 
-        generateReadme(response);
-        
-});
+
+
+
+        });
 
 }
 

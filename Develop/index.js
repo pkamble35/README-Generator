@@ -64,7 +64,7 @@ async function getGitProfile(username) {
     const queryUrl = `https://api.github.com/users/${username}`;
     try {
         let res = await axios.get(queryUrl);
-        return res.data.url;
+        return res.data.html_url;
     } catch (error) {
         console.log("error", error.response.status);
     }

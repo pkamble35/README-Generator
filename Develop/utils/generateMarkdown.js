@@ -26,7 +26,7 @@ function generateMarkdown(response, profile) {
   var readme;
 
   if (profile) {
-    readme = license + ("## Questions" + "\n for any questions contact me at " + response.emailaddress + " or " + `[github](${profile})` + "\n");
+    readme = license + ("## Questions" + "\n for any questions contact me at " + response.emailaddress + " or " + `[Github](${profile})` + "\n");
   } else {
     readme = license + ("## Questions" + "\n for any questions contact me at " + response.emailaddress + "\n");
   }

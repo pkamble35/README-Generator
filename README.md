@@ -18,4 +18,4 @@ Invoke node index.js to test the application
 ## License
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
 ## Questions
-For any questions contact me at priyadamodar12@gmail.com or [github](https://api.github.com/users/pkamble35)
+For any questions contact me at priyadamodar12@gmail.com or [Github](https://github.com/pkamble35)

@@ -5,11 +5,12 @@ function generateMarkdown(response, profile) {
 
   var projectDiscription = projectTitle + (response.projectDiscription + "\n");
   var tableOfContent = projectDiscription + ("##### Table of Contents " + "\n"
-    + "[Installation](#Installation)\n"
-    + "[Usage](#Usage)\n"
-    + "[License](#License)\n"
-    + "[Contributing](#Contributing)\n"
-    + "[Test](#Test)\n"
+  + "==================================\n"
+    + "* [Installation](#Installation)\n"
+    + "* [Usage](#Usage)\n"
+    + "* [License](#License)\n"
+    + "* [Contributing](#Contributing)\n"
+    + "* [Test](#Test)\n"
   );
   var projectInstallation = tableOfContent + projectDiscription + ("## Installation" + "\n" + response.projectInstallationInstructions + "\n");
   var projectUsage = projectInstallation + ("## Usage" + "\n" + response.projectUsageInformation + "\n");

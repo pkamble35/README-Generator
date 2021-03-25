@@ -16,6 +16,5 @@ To contribute to this project, please make sure you follow the guidelines in The
 Invoke node index.js to test the application
 ## License
 MIT
-## Author
-priyadamodar12@gmail.com
-[github](https://api.github.com/users/pkamble35)
+## Questions
+For any questions contact me at priyadamodar12@gmail.com or [github](https://api.github.com/users/pkamble35)

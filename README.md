@@ -1,11 +1,11 @@
 # Readme Generator
 This is command line application which  generates Readme file based on users inputs.
 ##### Table of Contents 
-[Installation](#Installation)
-[Usage](#Usage)
-[License](#License)
-[Contributing](#Contributing)
-[Test](#Test)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Test](#Test)
 ## Installation
 Below command should be executed node index.js
 ## Usage

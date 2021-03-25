@@ -43,7 +43,7 @@ const questions = [
         type: "list",
         message: "What License do you need?",
         name: "projectLicense",
-        choices: ["MIT", "Apache"]
+        choices: ["MIT", "GPLv3"]
     },
 
     {
@@ -62,9 +62,12 @@ const questions = [
 // This function gets the github link for entered github user name
 async function getGitProfile(username) {
     const queryUrl = `https://api.github.com/users/${username}`;
-
-    let res = await axios.get(queryUrl);
-    return res.data.url;
+    try {
+        let res = await axios.get(queryUrl);
+        return res.data.url;
+    } catch (error) {
+        console.log("error", error.response.status);
+    }
 }
 // function to write README file
 function writeToFile(fileName, data) {

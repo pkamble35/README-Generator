@@ -1,6 +1,7 @@
 # Readme Generator
 This is command line application which  generates Readme file based on users inputs.
 ##### Table of Contents 
+=================
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
